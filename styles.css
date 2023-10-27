@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+
+:root {
+  --accent-color: #fff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: aquamarine;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  width: 900px;
+  height: inherit;
+  margin: 2rem auto;
+  background-image: url("./night-paris.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain; 
+  background-attachment: fixed;
+}
+
+.sign-in-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 30px;
+  color: var(--accent-color);
+  z-index: 1000;
+}
+.sign-in-section__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 23px;
+}
+.sign-in-section__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.btn {
+  color: var(--accent-color);
+  background-color: transparent;
+  border: 3px solid var(--accent-color);
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  opacity: 0.6;
+}
+.sign-in__btn {
+  margin-top: 300px;
+}
+.sign-up-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 30px;
+  color: var(--accent-color);
+  z-index: 999;
+}
+.sign-up-section__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 23px;
+}
+.sign-up-section__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+.sign-up__btn {
+  margin-top: 300px;
+}
+.sign-up-form {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 50px;
+  color: #000;
+  background-color: var(--accent-color);
+  z-index: 998;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+.sign-up-form__title {
+  margin-top: 0;
+  margin-bottom: 45px;
+  font-size: 25px;
+}
+.sign-up-form input {
+  width: 100%;
+  padding-bottom: 20px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  outline: none;
+}
+
+.sign-up-form input:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.sign-up-form input::placeholder {
+  text-align: center;
+}
+.sign-up-form__btn {
+  width: 100%;
+  background-color: orange;
+  margin-top: 25px;
+}
+
+.join-btn {
+  background-color: transparent;
+  border: 2px solid #ccc;
+  color: #ccc;
+  text-transform: lowercase;
+}
+
+.join-btn span {
+  color: #000;
+  font-weight: 600;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  height: inherit;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+@keyframes translate-sign-in {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(600px);
+  }
+}
+
+@keyframes translate-form {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+
+@keyframes translate-sign-up {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-50px);
+  }
+}
+@keyframes translate-form-reverse {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
